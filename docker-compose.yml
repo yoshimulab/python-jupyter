@@ -1,0 +1,9 @@
+services:
+  jupyter:
+    build: .
+    container_name: python-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/workspace
+    restart: unless-stopped
